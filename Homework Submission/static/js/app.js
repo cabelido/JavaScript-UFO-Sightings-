@@ -1,11 +1,11 @@
 // from data.js
 var tableData = data;
 
-// Create variables.
+// Assign variables
 var button = d3.select("#filter-btn")
 var tblbody = d3.select('tbody');
 
-// Create table with data from data.js
+// Create a function that creates a table with data from data.js
 function createTable(data){
     tblbody.html('');
     data.forEach((row)=>{
@@ -39,6 +39,6 @@ function handleClick () {
     } else {tblbody.append("tr").append("td").text("There are no matching results.");}
 }
 
-//Add element and action to call the function when click event occurs. 
+//Attach the event handler function to the button element and call the function. 
 button.on("click", handleClick);
 
